@@ -1,0 +1,12 @@
+:root {
+  --gridSize: 4px;
+
+
+
+  --input-border-color: #DDDDDD;
+  --input-border-color--active: #5fbdbb;
+  --input-border-color--warning: #ffffa7;
+  --input-border-color--error: #f00f00;
+  --input-border-color--focus: #613dcc;
+}
+

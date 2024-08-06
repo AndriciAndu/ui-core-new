@@ -1,0 +1,6 @@
+.input {
+  height: calc(9 * var(--gridSize));
+  line-height: calc(9 * var(--gridSize));
+
+  padding: 0 calc(2 * var(--gridSize));
+}

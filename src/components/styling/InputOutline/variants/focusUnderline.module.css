@@ -1,0 +1,35 @@
+.focus-underline {
+  &:before {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--input-border-color);
+  }
+
+  &::after {
+    content: '';
+    
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 100%;
+    z-index: 1;
+  
+    height: 0;
+    border-bottom: 2px solid transparent;
+  
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:focus,
+  &:focus-within {
+    &::before {
+      border: none;
+    }
+
+    &::after {
+      border-color: var(--input-border-color--focus);
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

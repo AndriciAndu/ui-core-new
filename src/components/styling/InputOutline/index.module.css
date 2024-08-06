@@ -1,0 +1,39 @@
+.inputOutline {
+  position: relative;
+  display: inline-block;
+
+  flex: 1 1 100%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  
+    transform: translate(-50%, -50%);
+  
+    border: 1px solid var(--input-border-color);
+    border-radius: calc(0.5 * var(--gridSize));
+  
+    pointer-events: none;
+  }
+
+  &:focus,
+  &:focus-within {
+    &::before {
+      border: 2px solid var(--input-border-color--focus);
+    }
+  }
+
+  /* states */
+  &.error {
+    &::before,
+    &::after {
+      border-color: var(--color-textError) !important;
+    }
+  }
+}

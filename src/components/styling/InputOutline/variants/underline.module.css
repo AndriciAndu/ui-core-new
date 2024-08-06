@@ -1,0 +1,15 @@
+.underline {
+  &:before {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--input-border-color);
+  }
+
+  &:focus,
+  &:focus-within {
+    &::before {
+      border: none;
+      border-bottom: 2px solid var(--input-border-color--focus);
+    }
+  }
+}
