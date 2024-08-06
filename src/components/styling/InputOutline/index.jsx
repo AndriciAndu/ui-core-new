@@ -8,11 +8,6 @@ import underlineStyles from './variants/underline.module.css';
 import focusUnderlineStyles from './variants/focusUnderline.module.css';
 
 
-const variants = {
-  underline: underlineStyles.underline,
-  'focus-underline': focusUnderlineStyles['focus-underline'],
-};
-
 const InputOutline = (props) => {
   const {
     children,
@@ -25,6 +20,11 @@ const InputOutline = (props) => {
   if (!children) {
     return null;
   }
+
+  const variants = {
+    underline: underlineStyles?.underline,
+    'focus-underline': focusUnderlineStyles?.['focus-underline'],
+  };
 
   const labelClassNames = classNames({
     [styles.inputOutline]: true,
