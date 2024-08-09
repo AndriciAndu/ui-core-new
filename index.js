@@ -1,8 +1,7 @@
-import TextInput from './src/components/TextInput';
+import TextInput, { UncontrolledTextInput } from './src/components/TextInput';
 
 export {
-  default as TextInput,
-  UncontrolledTextInput,
+  default as TextInput
 } from "./src/components/TextInput";
 
 export {
