@@ -11,7 +11,7 @@
   "main": "build/main.js",
   "scripts": {
     "build": "webpack .",
-    "andu": " rm -rf ./build && webpack . && npm version patch --f && git add -! && git commit && git push origin master && npm publish"
+    "andu": " rm -rf ./build && webpack . && npm version patch --f && git add -A && git commit -m 'test' && git push origin master && npm publish"
   },
   "browserslist": {},
   "devDependencies": {
