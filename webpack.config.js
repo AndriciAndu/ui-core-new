@@ -1,20 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./index.js",
   output: {
-    path: path.resolve(__dirname, "src"),
+    path: path.resolve("build"),
     filename: "main.js",
-  },
-
-  target: "web",
-  devServer: {
-    port: "3000",
-    static: ["./src"],
-    open: true,
-    hot: true,
-    liveReload: true,
+    libraryTarget: "commonjs2",
   },
 
   resolve: {
@@ -36,7 +28,10 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                namedExport: false,
+                exportLocalsConvention: 'as-is',
+              },
             },
           },
         ],
@@ -48,5 +43,9 @@ module.exports = {
         exclude: /\.module\.css$/,
       },
     ],
+  },
+
+  externals: {
+    react: "react",
   },
 };
