@@ -1,6 +1,6 @@
 {
   "name": "@byandu/ui-core-test",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": "",
   "license": "ISC",
   "repository": {
@@ -11,7 +11,7 @@
   "main": "build/main.js",
   "scripts": {
     "build": "webpack .",
-    "andu": " rm -rf ./build && webpack . && npm version patch --f && git add -A && git commit -m 'test script' && git push origin master && npm publish"
+    "andu": " rm -rf ./build && webpack . && npm version patch --f "
   },
   "browserslist": {},
   "devDependencies": {
