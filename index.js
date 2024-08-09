@@ -1,3 +1,5 @@
+import './src/styles/variables.css';
+
 import TextInput, { UncontrolledTextInput } from './src/components/TextInput';
 
 export {
