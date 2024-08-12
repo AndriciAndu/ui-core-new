@@ -1,11 +1,11 @@
 import './src/styles/variables.css';
 
-import TextInput, { UncontrolledTextInput } from './src/components/TextInput';
 
 export {
-  default as TextInput
-} from "./src/components/TextInput";
+  default as TextInput,
+  UncontrolledTextInput,
+} from './src/components/TextInput';
 
 export {
-  default as InputOutline
-} from "./src/components/styling/InputOutline";
+  default as InputOutline,
+} from './src/components/styling/InputOutline';

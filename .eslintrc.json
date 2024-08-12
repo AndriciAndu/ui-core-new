@@ -1,0 +1,3 @@
+{
+  "extends": "@byandu/eslint-config-beta/"
+}
